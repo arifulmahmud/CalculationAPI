@@ -9,12 +9,6 @@ using System.Web.Http.Results;
 
 namespace CalculationApp.Tests
 {
-    public class Response
-    {
-        public string result { get; set; }
-        public string isPrime { get; set; }
-    }
-
     [TestClass]
     public class UnitTest
     {
@@ -55,7 +49,6 @@ namespace CalculationApp.Tests
             Assert.IsNotNull(actionResult);
             Assert.IsNotNull(actionResult.Content);
             Assert.AreEqual(HttpStatusCode.OK, actionResult.StatusCode);
-            //Assert.AreEqual(true, actionResult.Content);
         }
 
         /// <summary>
