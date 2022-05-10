@@ -57,5 +57,24 @@ namespace CalculationApp.Tests
             Assert.AreEqual(HttpStatusCode.OK, actionResult.StatusCode);
             //Assert.AreEqual(true, actionResult.Content);
         }
+
+        /// <summary>
+        /// This Test method tests if Bad Request error is returned when bad data is passed to the endpoint
+        /// </summary>
+        [TestMethod]
+        public void BadRequest_ShouldReturnError()
+        {
+            var controller = new CalcController
+            {
+                Request = new HttpRequestMessage(),
+                Configuration = new HttpConfiguration()
+            };
+
+            var action = controller.Get("","");
+            var actionResult = action.ExecuteAsync(CancellationToken.None).Result;
+            Assert.IsNotNull(actionResult);
+            Assert.IsNotNull(actionResult.Content);
+            Assert.AreEqual(HttpStatusCode.BadRequest, actionResult.StatusCode);
+        }
     }
 }
