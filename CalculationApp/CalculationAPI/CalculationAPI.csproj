@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CalcWebApi - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ProfanityApp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\ProfanityApp - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\ProfanityApp - Web Deploy.pubxml" />
