@@ -1,5 +1,5 @@
 # CalculationAPI
-Terveystalo assignment project
+Assignment project
 
 This API is to check sum of given intergers and check if the sum or given number is Prime.
 
